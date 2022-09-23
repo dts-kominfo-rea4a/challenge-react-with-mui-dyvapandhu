@@ -41,7 +41,7 @@ const ContactForm = (props) => {
 
   const doSubmit = () => {
     props.addContact(newContact);
-    setNewContact(objContact)
+    setNewContact(objContact);
   };
 
   return (
@@ -63,6 +63,7 @@ const ContactForm = (props) => {
             id="filled-basic"
             label="Phone*"
             variant="filled"
+            type="number"
             fullWidth
             sx={{ mb: 2 }}
             value={newContact.phone}
@@ -92,7 +93,17 @@ const ContactForm = (props) => {
           />
         </div>
         <div>
-          <Button color="success" variant="text" onClick={doSubmit}>
+          <Button
+            disabled={
+              !newContact.name ||
+              !newContact.phone ||
+              !newContact.email ||
+              !newContact.photo
+            }
+            color="success"
+            variant="text"
+            onClick={doSubmit}
+          >
             ADD NEW
           </Button>
         </div>
