@@ -55,7 +55,6 @@ const ContactForm = (props) => {
             fullWidth
             sx={{ mb: 2 }}
             role="textbox"
-            value={newContact.name}
             onChange={handleChangeName}
           />
         </div>
@@ -68,7 +67,6 @@ const ContactForm = (props) => {
             fullWidth
             sx={{ mb: 2 }}
             role="textbox"
-            value={newContact.phone}
             onChange={handleChangePhone}
           />
         </div>
@@ -80,7 +78,6 @@ const ContactForm = (props) => {
             fullWidth
             sx={{ mb: 2 }}
             role="textbox"
-            value={newContact.email}
             onChange={handleChangeEmail}
           />
         </div>
@@ -92,18 +89,17 @@ const ContactForm = (props) => {
             fullWidth
             sx={{ mb: 2 }}
             role="textbox"
-            value={newContact.photo}
             onChange={handleChangePhoto}
           />
         </div>
         <div>
           <Button
-            // disabled={
-            //   !newContact.name ||
-            //   !newContact.phone ||
-            //   !newContact.email ||
-            //   !newContact.photo
-            // }
+            disabled={
+              !newContact.name ||
+              !newContact.phone ||
+              !newContact.email ||
+              !newContact.photo
+            }
             color="success"
             variant="text"
             onClick={doSubmit}
