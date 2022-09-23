@@ -54,6 +54,7 @@ const ContactForm = (props) => {
             variant="filled"
             fullWidth
             sx={{ mb: 2 }}
+            role="textbox"
             value={newContact.name}
             onChange={handleChangeName}
           />
@@ -66,6 +67,7 @@ const ContactForm = (props) => {
             type="number"
             fullWidth
             sx={{ mb: 2 }}
+            role="textbox"
             value={newContact.phone}
             onChange={handleChangePhone}
           />
@@ -77,6 +79,7 @@ const ContactForm = (props) => {
             variant="filled"
             fullWidth
             sx={{ mb: 2 }}
+            role="textbox"
             value={newContact.email}
             onChange={handleChangeEmail}
           />
@@ -88,6 +91,7 @@ const ContactForm = (props) => {
             variant="filled"
             fullWidth
             sx={{ mb: 2 }}
+            role="textbox"
             value={newContact.photo}
             onChange={handleChangePhoto}
           />
@@ -103,6 +107,7 @@ const ContactForm = (props) => {
             color="success"
             variant="text"
             onClick={doSubmit}
+            role="button"
           >
             ADD NEW
           </Button>

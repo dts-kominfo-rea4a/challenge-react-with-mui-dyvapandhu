@@ -16,13 +16,13 @@ import React from "react";
 
 // Kalian bisa membuat CSS sendiri di src/components/Contact.css
 // atau langsung tambahkan dengan sx={{}}
-const Contact = (props) => {
+const Contact = ({data}) => {
   // Contact berisi foto, nama, telepon, dan email
   return (
     <Card>
       <CardContent>
         <List>
-          {props.data.map((contact, index) => {
+          {data.map((contact, index) => {
             return (
               <div key={index}>
                 <ListItem alignItems="flex-start">
