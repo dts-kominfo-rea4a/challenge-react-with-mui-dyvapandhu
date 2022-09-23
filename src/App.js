@@ -18,7 +18,8 @@ const App = () => {
 
   const addNewContact = (newContact) => {
     setContacts((prevContacts) => {
-      prevContacts.push(newContact);
+      const newContacts = [...prevContacts, newContact]
+      return newContacts
     });
   };
 

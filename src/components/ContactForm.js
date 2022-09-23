@@ -40,8 +40,8 @@ const ContactForm = (props) => {
   };
 
   const doSubmit = () => {
-    // props.addContact(newContact);
-    console.log(JSON.stringify(newContact));
+    props.addContact(newContact);
+    setNewContact(objContact)
   };
 
   return (
