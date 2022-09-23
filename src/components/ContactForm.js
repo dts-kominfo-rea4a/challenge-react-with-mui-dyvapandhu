@@ -94,12 +94,12 @@ const ContactForm = (props) => {
         </div>
         <div>
           <Button
-            disabled={
-              !newContact.name ||
-              !newContact.phone ||
-              !newContact.email ||
-              !newContact.photo
-            }
+            // disabled={
+            //   !newContact.name ||
+            //   !newContact.phone ||
+            //   !newContact.email ||
+            //   !newContact.photo
+            // }
             color="success"
             variant="text"
             onClick={doSubmit}
