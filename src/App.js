@@ -1,4 +1,11 @@
-import { Container, Grid } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  Container,
+  Divider,
+  Grid,
+  List,
+} from "@mui/material";
 import "./App.css";
 import ContactForm from "./components/ContactForm";
 import Contact from "./components/Contact";
@@ -18,8 +25,8 @@ const App = () => {
 
   const addNewContact = (newContact) => {
     setContacts((prevContacts) => {
-      const newContacts = [...prevContacts, newContact]
-      return newContacts
+      const newContacts = [...prevContacts, newContact];
+      return newContacts;
     });
   };
 
@@ -32,7 +39,20 @@ const App = () => {
             <ContactForm addContact={addNewContact} />
           </Grid>
           <Grid item xs={12} md={6}>
-            <Contact data={contacts} />
+            <Card>
+              <CardContent>
+                <List>
+                  {contacts.map((contact, index) => {
+                    return (
+                      <div key={index}>
+                        <Contact data={contact} />
+                        <Divider component="li" />
+                      </div>
+                    );
+                  })}
+                </List>
+              </CardContent>
+            </Card>
           </Grid>
         </Grid>
       </Container>
