@@ -1,5 +1,6 @@
 // Kalian bisa menambahkan CSS di src/components/Header.css
 // atau langsung tambahkan dengan sx={{}}
+import { Divider } from "@mui/material";
 import React from "react";
 import "../components/Header.css";
 
@@ -13,7 +14,7 @@ const Header = () => {
   return (
     <div className="header">
       <h1>{title}</h1>
-      <p>{subTitle}</p>
+      <Divider>{subTitle}</Divider>
     </div>
   );
 };
