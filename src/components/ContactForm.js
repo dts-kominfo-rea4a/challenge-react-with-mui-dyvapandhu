@@ -49,7 +49,7 @@ const ContactForm = (props) => {
       <CardContent>
         <div>
           <TextField
-            id="filled-basic"
+            id="name"
             label="Name*"
             variant="filled"
             fullWidth
@@ -60,7 +60,7 @@ const ContactForm = (props) => {
         </div>
         <div>
           <TextField
-            id="filled-basic"
+            id="phone"
             label="Phone*"
             variant="filled"
             type="number"
@@ -72,7 +72,7 @@ const ContactForm = (props) => {
         </div>
         <div>
           <TextField
-            id="filled-basic"
+            id="email"
             label="Email*"
             variant="filled"
             fullWidth
@@ -83,7 +83,7 @@ const ContactForm = (props) => {
         </div>
         <div>
           <TextField
-            id="filled-basic"
+            id="photo"
             label="Photo URL*"
             variant="filled"
             fullWidth
