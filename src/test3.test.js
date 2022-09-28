@@ -12,23 +12,23 @@ describe('App', () => {
         expect(photos).toHaveLength(4);
     });
 
-    it('should be able to add new contact', async () => {
-        render(<App></App>);
-        const input = screen.getAllByRole('textbox');
-        const button = screen.getAllByRole('button');
+    // it('should be able to add new contact', async () => {
+    //     render(<App></App>);
+    //     const input = screen.getAllByRole('textbox');
+    //     const button = screen.getAllByRole('button');
 
-        fireEvent.change(input[0], { target: { value: 'Nina' } });
-        fireEvent.change(input[1], { target: { value: '087771711777' } });
-        fireEvent.change(input[2], { target: { value: 'nina@email.com' } });
-        fireEvent.change(input[3], { target: { value: 'http://placekitten.com/100' } });
-        fireEvent.click(button[0]);
+    //     fireEvent.change(input[0], { target: { value: 'Nina' } });
+    //     fireEvent.change(input[1], { target: { value: '087771711777' } });
+    //     fireEvent.change(input[2], { target: { value: 'nina@email.com' } });
+    //     fireEvent.change(input[3], { target: { value: 'http://placekitten.com/100' } });
+    //     fireEvent.click(button[0]);
 
-        const photos = screen.getAllByRole('img');
-        const phone = screen.getByText(/087771711777/i);
-        const email = screen.getByText(/nina@email.com/i);
-        expect(photos).toHaveLength(5);
-        expect(phone).toBeInTheDocument();
-        expect(email).toBeInTheDocument();
-    });
+    //     const photos = screen.getAllByRole('img');
+    //     const phone = screen.getByText(/087771711777/i);
+    //     const email = screen.getByText(/nina@email.com/i);
+    //     expect(photos).toHaveLength(5);
+    //     expect(phone).toBeInTheDocument();
+    //     expect(email).toBeInTheDocument();
+    // });
 });
 

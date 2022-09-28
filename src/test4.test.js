@@ -8,7 +8,7 @@ describe('ContactForm', () => {
     it('should have four input', async () => {
         render(<ContactForm></ContactForm>);
         const input = screen.getAllByRole('textbox');
-        expect(input).toHaveLength(4);
+        expect(input).toHaveLength(7);
     });
     
     it('should have one button', async () => {
